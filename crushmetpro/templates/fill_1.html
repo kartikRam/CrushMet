@@ -1,0 +1,315 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME ICONS LINKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- FONT FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Kanit:wght@100;800;900&family=Martel+Sans:wght@900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <!-- TITLE ICONS -->
+    <link rel="shortcut icon" type="image" href="images/M.png">
+
+    <!-- FORM ANIMATE -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+    <!-- STYLE -->
+    <style>
+
+        /* BODY */
+        body 
+        {
+            margin: 0;
+            font-family: 'Montserrat';
+        }
+
+        html{
+            background-color: #ff7779;
+        }
+        /* LOGIN */
+        .fill{
+            display: flex;
+    width: 65%;
+    margin: auto;
+    margin-top: 1%;
+    box-shadow: #ffff 0px 0px 5px 0px;
+    padding-top: 3%;
+    margin-bottom: 10%;
+    margin-top: 7%;
+    padding-right: 5%;
+    background: white;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(1000px);
+
+        }
+        .fill .right .logo{
+            margin-left: 13%;text-align: right;}
+        .fill .right .logo span{font-size: 15px;
+            text-transform: uppercase;}
+        .fill .right .logo span img{width: 150px;}
+        .fill .right .img{margin-top: 15%;
+    text-align: center;}
+        .fill .right{
+            width: 50%;
+            float: left;
+        }
+        .fill .right .img img{
+            width: 75%;
+        }
+
+        /* SINGIN RIGHT PART */
+        .fill .left form {
+            width: 100%;
+            margin-top: 8%;
+        }
+        .fill .left .d_input {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4%;
+            background: #eff2f4;
+            padding: 2px 0px;
+            color: #babdc3;
+            padding-left: 5%;
+            padding-bottom: 12px;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 7%
+        }
+        .fill .left .d_input i{
+            font-size: 20px;
+            color: #393535;
+        }
+        .fill .left .d_input .right_input{
+            margin-left: 20px;
+        }
+        .fill .left .d_input .right_input{
+            display: inline-block;
+            margin-bottom: 0px;
+        }
+        .fill .left .d_input .right_input input {
+            border: 0px;
+            border-bottom: 1px solid black;
+            background: transparent;
+            outline: 0;
+            color: #393535;
+        }
+        .fill .left .d_input i.fa.fa-thin.fa-lock {
+            font-size: 20px;
+            color: #393535;
+        }
+        .fill .left{
+            width: 50%;
+    float: left;
+    margin-top: 3%;
+    padding-left: 5%;
+    margin-bottom: 5%;
+            
+        }
+        .fill .left .btn1 {
+            border: 0;
+            background: #ff7779;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            margin-right: 4%;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .fill .left .btn3 {
+            border: 0;
+            background: #4285f4;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            margin-right: 4%;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .fill .left .btn2 {
+            font-size: 15px;
+            background: transparent;
+            border: 0px;
+            cursor: pointer;
+            width:auto;
+        }
+        .fill .left h2{
+            margin-top: 0px;
+            color: #393535;
+        }
+        .fill .left h3{
+            margin-top: 0px;
+            font-size: 15px;
+            font-weight: 300;
+            padding-right: 3%;
+            color: #393535;
+        }
+        .fill .left form .d_input select{
+            border: 0px;
+            margin-top: 10%;
+            background: transparent;
+            margin-left: -5px;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            color: black;
+        }
+        .fill .left form .d_input:nth-child(2){
+            margin-bottom: 10%;
+        }
+        .fill{
+            opacity: 0;
+            transform: translateY(1000px);
+        }
+        .close_btn{
+            width: 90%;
+    display: inline-block;
+    text-align: right;
+    font-size: 25px;
+    cursor: pointer;
+        }
+        .cubes{
+            float: right;
+            margin-right: 10%;
+        }
+        .cube{
+            height: 60px;
+    background-color: #ff7779;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: 40%;
+    text-align: center;
+    padding: 0% 0%;
+    padding-top: 37px;
+    padding-left: 2%;
+    padding-right: 2%;
+    
+
+        }
+        
+        .cubes hr:nth-child(2){
+            width: 1.4px;
+    position: absolute;
+    left: 14.7%;
+    height: 68px;
+    background: black;
+    top: 23.6%;
+    border: 0px;
+        }
+        .cubes hr:nth-child(4){
+            width: 1.4px;
+    position: absolute;
+    left: 14.7%;
+    height: 68px;
+    background: black;
+    top: 62%;
+    border: 0px;
+        }
+        .cube1 a{
+            color: #ffff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .cube2 a{
+            color: #ffff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .cube3 a{
+            color: #ffff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+    </style>
+    
+    <title>- Hey</title>
+</head>
+<body>
+    <div class="fill">
+        <div class="left">
+            <h3 class="l_hd">#iNtro</h3>
+            <form method="POST" action="updateprof" enctype="multiplart/form-data">
+                {% csrf_token %}
+                <div class="d_input">
+                    <div class="left_input">
+                    </div>
+                    <div class="right_input">
+                        <span style="display: inline-block;
+                        margin: 5% 0%;">Who You r ?</span><br>
+                        {% comment %} {{form.gender}} {% endcomment %}
+                        <a href="#" style="float: left;
+                        width: 50%;"><img src="{% static 'images/fill1.png' %}" id="malegender" onclick="FemaleGender()" alt=""  style="width: 75%;"></a>
+                        <img src="{% static 'images/fill2.png' %}" alt="" id="femalegender"  onclick="MaleGender()" style="width: 38%;height: 180px;">
+                        <input type="hidden" id="username" name="username" value="{{request.user.username}}">
+                        <input type="hidden" id="gender" name="gender" value="">
+ 
+                    </div>
+                </div>
+                <div class="d_input">
+                    <div class="left_input">
+                    </div>
+                    <div class="right_input">
+                        <span style="display: inline-block;
+                        margin: 5% 0%;">May i know your preference ?</span><br>
+                        <a href="#" style="float: left;
+                        width: 50%;"><img src="{% static 'images/fill1.png' %}" id="malepref" alt="" onclick="FemalePref()"  style="width: 75%;"></a>
+                        <a href="#"><img src="{% static 'images/fill2.png' %}" id="femalepref" alt="" onclick="MalePref()" style="width: 38%;height: 180px;"></a>
+                        <input type="hidden" id="preference" name="preference" value="">
+                        
+                    </div>
+                </div>
+                <!-- <a href="#" class="fg">Forgot Password ?</a> -->
+                
+                <input type="submit" value="Yeah !" class="btn1">
+            </form>
+        </div>
+        <div class="right">
+            <div class="logo">
+                <span><img src="{% static 'images/M.png' %}" alt="" class="l_img"></span>
+            </div>
+            <div class="linebar">
+                <div class="cubes">
+                    <div class="cube cube1" style="background-color: #393535;"><a href="{% url 'pro1' %}">#iNtro</a></div>
+                    <div class="cube cube2"><a href="{% url 'pro2' %}">#uSER iNfo</a></div>
+                    <div class="cube cube3"><a href="{% url 'pro3' %}">#pROFILE</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{% static 'javascript/gsap_fill1.js' %}"></script>
+</body>
+</html>
+<script>
+    document.getElementById("malegender").addEventListener("click", malegender);
+
+    function MaleGender(){
+        document.getElementById('gender').value= "male";
+        
+    }
+    function FemaleGender(){
+        
+        document.getElementById('gender').value= "female";
+        
+    }
+    function MalePref(){
+        
+        document.getElementById('preference').value= "male";
+        
+    }
+    function FemalePref(){
+        
+        document.getElementById('preference').value= "female";
+        
+    }
+</script>

@@ -1,0 +1,286 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME ICONS LINKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- FONT FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Kanit:wght@100;800;900&family=Martel+Sans:wght@900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <!-- TITLE ICONS -->
+    <link rel="shortcut icon" type="image" href="{% static 'images/M.png' %}">
+
+    <!-- FORM ANIMATE -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    </style>
+    <title>CRUSHMET</title>
+    <style>
+        .parent {
+  display: flex;
+}
+
+.profile img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.log-out{
+  font-size: 15px;
+            background: transparent;
+            border: 0px;
+            cursor: pointer;
+            width:auto;
+}
+.parent_logo {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+    width: 100%;
+  margin-top: -5%;
+}
+.profile .dp{
+  margin-left: 5px;
+}
+.parent_logo .logo img {
+  width: 100px;
+  ;
+}
+
+.parent_logo .filter h5 {
+  padding: 15px;
+
+}
+
+.left {
+  padding-right: 100px;
+  margin-left: 3%;
+  height: 655px;
+}
+
+.container .box .post h1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.left .profile {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  font-family: sans-serif;
+  align-items: center;
+  margin-left: 80px;
+
+}
+
+.container .ch_box {
+  background-color: rgba(255, 255, 255, 0.074);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 25px;
+  transition: all ease .3s;
+  width: 115%;
+}
+
+.container .ch_box {
+  display: flex;
+
+}
+  .btn-true {
+    background: #393535;
+    border: none;
+    border-radius: 100%;
+    color: #444;
+    margin-left: 10%;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    box-shadow: -6px -6px 14px rgb(255 255 255 / 0%), -6px -6px 10px rgb(255 255 255 / 50%), 6px 6px 8px rgb(255 255 255 / 50%), 6px 6px 10px rgb(0 0 0 / 50%);  
+}
+.btn-true img
+.false{
+  margin-right: 20px;
+  margin-left: 30px;
+}
+button:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+    -2px -2px 4px rgba(44, 38, 38, 0.4),
+    2px 2px 2px rgba(255, 255, 255, .05),
+    2px 2px 4px rgba(0, 0, 0, .1);
+}
+
+button:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+    inset -2px -2px 4px rgba(255, 255, 255, .5),
+    inset 2px 2px 2px rgba(255, 255, 255, .075),
+    inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
+
+.like {
+  width: 150px;
+}
+
+
+.container .ch_box .title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: .1em
+}
+
+.container .ch_box div strong {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.container .post img {
+    height: 490px;
+    width: 370px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.container .ch_box div p {
+  margin: 0;
+  font-size: .9em;
+  font-weight: 300;
+  letter-spacing: .1em;
+}
+
+.true {
+  margin-top: -4%;
+    margin-left: 29%;
+    display: flex;
+    align-items: center;
+}
+.container .ch_box div span {
+  font-size: .7rem;
+  font-weight: 300;
+}
+
+.container .ch_box .true {
+  float: left;
+}
+
+.container .ch_box div span:nth-child(3) {
+  font-weight: 500;
+  margin-right: .2rem;
+}
+
+
+.container .ch_box {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.454);
+}
+
+.true img {
+  width: 65px;
+}
+body{
+    margin: 0;
+}
+
+@media only screen and (min-width: 1500px) {
+    .container{
+        margin-top: -15%;
+    }
+    .parent .left{
+        height: 1011px;
+    }
+    .container .post img{
+        height: 655px;
+    width: 586px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="left">
+          <div class="logo" id="logo">
+            <img src="{% static 'images/M.png' %}" style="width: 130px">
+        </div>
+        </div>
+        <div class="right">
+            <div class="container">
+                <div class="parent_logo">
+                  <div class="profile" style="display: flex;
+                  align-items: center;
+                  margin-right: 2%;">
+                    <a href="DASHBOARD/examples/user.html" class="dp"><img src="{% static 'images/E-Copy.jpg' %}"></a>
+                     <a href="DASHBOARD/examples/user.html" style="font-size: 17px;
+                     font-weight: 100;
+                     margin-left: 10%;text-decoration: none;color: #393535;">Divyesh</a>                
+                </div>
+                <a href class="log-out" style="margin-left: 5%;
+                color: #FD4A65;
+                font-size: 13px;">
+                    LOG OUT
+                </a>
+
+                    
+
+                </div>
+                <div class="box" style="margin-top: 3%;">
+                    <div class="ch_box" style="margin-left: -10%;">
+                        <div class="post">
+                            <img src="{% static 'images/E-Copy.jpg' %}"  id="img_d">
+                        </div>
+                        <div class="desc" style="padding-left: 6%;">
+                            <h4>
+                                <h3 style="font-weight: 400;font-size: 20x;"><i class="fa fa-thin fa-user" style="margin-right: 3%;color: #FD4A65;"></i>Divyesh Rathod</h3>
+                                <h3 style="font-weight: 400;"><i class="fa fa-thin fa-child-reaching" style="margin-right: 3%;color: #FD4A65;"></i>Dancing, Acting</h3>
+                                <h3 style="font-weight: 400;"><i class="fa fa-duotone fa-video" style="margin-right: 3%;color: #FD4A65;"></i>Freinds Season</h3>
+                                <h3 style="font-weight: 400;"><i class="fa fa-thin fa-heart" style="margin-right: 3%;color: #FD4A65;"></i>I may have to pay your heart's house rent</h3>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="true">
+                        <a href="#"> <button class="btn-true match"><i class="fa-thin fa-x" style="    font-style: normal;
+                            font-size: 45px;
+                            padding: 6px 5px;
+                            color: #FD4A65;" onclick="divyesh_unique()"></i></button></a>
+                        <a href="#"></a><button class="btn-true false"><i class="fa fa-thin fa-check" style="font-style: normal;
+                            font-size: 35px;
+                            padding: 8px 5px;
+                            color: white;" onclick="divyesh_unique()"></i></button></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function divyesh_unique()
+        {
+          document.getElementById("img_d").display="none";
+          document.getElementById("img_d").src='IMAGES/IMG-0284.jpg';
+        }
+    </script>
+</body>
+
+</html>

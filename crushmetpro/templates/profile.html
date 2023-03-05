@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+        Name : {{request.user.profile.name}} <br><br>
+        Image : <img src="{{request.user.profile.image.url}}">
+        <a href="{% url 'profileup' %}" class="btn2">Update Profile</a>
+    </body>
+</html>
